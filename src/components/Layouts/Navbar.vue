@@ -103,16 +103,7 @@
             >
               <i class="ri-menu-4-line"></i>
             </div>
-            <!-- <button
-              class="searchbtn"
-              type="button"
-              @click="search = !search"
-              :aria-pressed="search ? 'true' : 'false'"
-              v-bind:class="{ search: button_search_state }"
-              v-on:click="button_search_state = !button_search_state"
-            >
-              <i class="flaticon-search"></i>
-            </button> -->
+            
             <div
             style="margin-left: 20px;"
               class="navbar-toggler mobile-menu xl-none"
@@ -130,23 +121,7 @@
         </nav>
       </div>
 
-      <!-- Search Modal -->
-      <!-- <div class="search-area" :class="{ search: search }">
-        <div class="container">
-          <form @submit.prevent>
-            <div class="form-group">
-              <input type="search" placeholder="Search Here" autofocus />
-            </div>
-          </form>
-          <button
-            type="button"
-            class="close-searchbox"
-            @click="search = !search"
-          >
-            <i class="ri-close-line"></i>
-          </button>
-        </div>
-      </div> -->
+     
     </div>
     <!-- End Navbar -->
   </div>
