@@ -5,7 +5,8 @@
                 <span>Currencies</span>
                 <h2>Ability To Transfer Money</h2>
                 <p>
-                    We understand the importance of global commerce. That's why we support transactions in a wide range of currencies, including but not limited to </p>
+                    We understand the importance of global commerce. That's why we support transactions in a wide range of currencies, including but not limited to 
+                </p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -79,7 +80,6 @@
         </div>
     </div>
 </template>
-
 <script>
 export default {
     name: 'Currency'
