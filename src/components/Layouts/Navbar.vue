@@ -150,10 +150,10 @@ export default {
   },
   methods: {
     scrollToSection(sectionName) {
-      // Find the target section by its name
+      
       const targetSection = document.getElementById(sectionName);
       if (targetSection) {
-        // Scroll to the target section smoothly
+       
         window.scrollTo({
           top: targetSection.offsetTop, 
           behavior: 'smooth',
