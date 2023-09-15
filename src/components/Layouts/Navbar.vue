@@ -120,8 +120,6 @@
           </div>
         </nav>
       </div>
-
-     
     </div>
     <!-- End Navbar -->
   </div>
@@ -154,11 +152,10 @@ export default {
     scrollToSection(sectionName) {
       // Find the target section by its name
       const targetSection = document.getElementById(sectionName);
-
       if (targetSection) {
         // Scroll to the target section smoothly
         window.scrollTo({
-          top: targetSection.offsetTop, // Add an offset if needed
+          top: targetSection.offsetTop, 
           behavior: 'smooth',
         });
       }
