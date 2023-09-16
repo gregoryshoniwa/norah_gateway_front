@@ -30,11 +30,14 @@ import BlogDetailsLeftSidebarPage from "../components/Pages/BlogDetailsLeftSideb
 import BlogDetailsRightSidebarPage from "../components/Pages/BlogDetailsRightSidebarPage";
 import ContactUsPage from "../components/Pages/ContactUsPage";
 
+import BackEndNavbar from "../backend/Navbar/BackEndNavbar";
 
 const routes = [
   // { path: "/", name: "HomeOnePage", component: HomeOnePage },
   // { path: "/home-two", name: "HomeTwoPage", component: HomeTwoPage },
   { path: "/", name: "HomeTwoPage", component: HomeTwoPage },
+  { path: "/back-office", name: "BackOffice", component: BackEndNavbar },
+  
   // { path: "/home-three", name: "HomeThreePage", component: HomeThreePage,meta: { offsetTop: 0 } },
   // { path: "/about", name: "AboutPage", component: AboutPage },
   // { path: "/services", name: "Services", component: Services },

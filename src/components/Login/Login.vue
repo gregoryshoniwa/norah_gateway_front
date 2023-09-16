@@ -97,9 +97,15 @@ export default {
         'success'
         )
         this.isLoading = false;
+        this.$router.push({ name: 'BackOffice', params: { userId: '123' } })
       }
       
     },
   },
 }
 </script>
+<style>
+body{
+  background: #010647;
+}
+</style>

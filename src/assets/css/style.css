@@ -39,9 +39,9 @@ button:focus,
           box-shadow: none;
 }
 
-body{
+/* body{
   background: #010647;
-}
+} */
 
 .form-control:focus {
   -webkit-box-shadow: none;
