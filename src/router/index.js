@@ -81,11 +81,11 @@ const routes = [
   //   name: "TermsOfServicePage",
   //   component: TermsOfServicePage,
   // },
-  // {
-  //   path: "/privacy-policy",
-  //   name: "PrivacyPolicyPage",
-  //   component: PrivacyPolicyPage,
-  // },
+  {
+    path: "/privacy-policy",
+    name: "PrivacyPolicyPage",
+    component: PrivacyPolicyPage,
+  },
   // { path: "/:pathMatch(.*)*", name: "ErrorPage", component: ErrorPage },
   // { path: "/blog", name: "BlogPage", component: BlogPage },
   // {

@@ -5,7 +5,7 @@
             <PageTitle pageTitle="Privacy Policy" />
             <PrivacyPolicy />
         </div>
-        <Footer />
+        <FooterStyleTwo />
     </div>
 </template>
 
@@ -13,7 +13,7 @@
 import Navbar from '../Layouts/Navbar'
 import PageTitle from '../Common/PageTitle'
 import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy'
-import Footer from '../Layouts/Footer'
+import FooterStyleTwo from '../Layouts/FooterStyleTwo'
 
 export default {
     name: 'PrivacyPolicyPage',
@@ -21,7 +21,7 @@ export default {
         Navbar,
         PageTitle,
         PrivacyPolicy,
-        Footer,
+        FooterStyleTwo,
     }
 }
 </script>

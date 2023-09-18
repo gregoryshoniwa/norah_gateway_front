@@ -8,8 +8,10 @@
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="login-form-wrap">
                         <div class="login-header">
-                            <h3>Register New Account</h3>
-                            <p>Welcome!! Create A New Account</p>
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <img src="../../assets/images/logo.fw.png" alt="logo">
+                                <span style="margin-top: 10px;"><h3>NORAH : Payment-Gateway</h3></span>
+                            </div> 
                         </div>
                         <div class="login-form">
                             <div class="login-body">
@@ -40,7 +42,7 @@
                                                 <input v-model="terms" type="checkbox" id="test_1">
                                                 <label for="test_1">
                                                     I Agree with the 
-                                                    <router-link class="link style1" to="/terms-of-service">Terms &amp; conditions</router-link>
+                                                    <router-link class="link style1" to="/privacy-policy">Privacy Policies</router-link>
                                                 </label>
                                             </div>
                                         </div>
@@ -154,6 +156,6 @@ export default {
 </script>
 <style>
 body{
-  background: #010647;
+    background: #010647 !important;
 }
 </style>

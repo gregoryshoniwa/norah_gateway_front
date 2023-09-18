@@ -12,7 +12,11 @@
               <ul class="contact-info list-style">
                 <li>
                   <i class="flaticon-call"></i>
-                  <a href="tel:02459271449">(+024) 592 71 449</a>
+                  <a href="tel:02459271449">(+263) 787 193 326</a>
+                </li>
+                <li>
+                  <i class="flaticon-call"></i>
+                  <a href="tel:02459271449">(+263) 8677 190 288</a>
                 </li>
                 <li>
                   <i class="flaticon-email-1"></i>
@@ -21,7 +25,7 @@
                 
                 <li>
                   <i class="flaticon-pin"></i>
-                  <p>St. Here Mandalay, New York, U.K</p>
+                  <p>194 Baines Avenue, Harare, Zimbabwe</p>
                 </li>
               </ul>
             </div>

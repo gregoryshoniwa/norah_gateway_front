@@ -9,8 +9,10 @@
                 <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="login-form-wrap">
                         <div class="login-header">
-                            <h3>Login Here</h3>
-                            <p>Welcome Back!! Login To Your Account</p>
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <img src="../../assets/images/logo.fw.png" alt="logo">
+                                <span style="margin-top: 10px;"><h3>NORAH : Payment-Gateway</h3></span>
+                            </div> 
                         </div>
                         <div class="login-form">
                             <div class="login-body">
@@ -106,6 +108,6 @@ export default {
 </script>
 <style>
 body{
-  background: #010647;
+  background: #010647 !important;
 }
 </style>
