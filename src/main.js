@@ -13,6 +13,8 @@ import "./assets/custom.scss";
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
+import VueApexCharts from 'vue3-apexcharts';
+
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
@@ -21,6 +23,8 @@ const app = createApp(App).use(router);
 
 app.use(VueSweetalert2);
 app.use(VueAxios, axios)
+
+app.use(VueApexCharts);
 
 app.use(BootstrapVue3);
 app.use(AOS.init());

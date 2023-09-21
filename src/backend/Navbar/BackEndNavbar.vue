@@ -438,6 +438,7 @@ export default {
         width: calc(100% - 250px);
         background: var(--body-color);
         transition: var(--tran-05);
+        overflow: auto;
     }
 
     .be-sidebar.close ~ .home{

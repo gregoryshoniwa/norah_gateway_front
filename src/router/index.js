@@ -31,9 +31,10 @@ import BlogDetailsRightSidebarPage from "../components/Pages/BlogDetailsRightSid
 import ContactUsPage from "../components/Pages/ContactUsPage";
 
 import BackEndNavbar from "../backend/Navbar/BackEndNavbar";
+import CheckOutPage from "../components/Pages/CheckOutPage";
 
 const routes = [
-  // { path: "/", name: "HomeOnePage", component: HomeOnePage },
+  { path: "/check-out", name: "CheckOutPage", component: CheckOutPage },
   // { path: "/home-two", name: "HomeTwoPage", component: HomeTwoPage },
   { path: "/", name: "HomeTwoPage", component: HomeTwoPage },
   { path: "/back-office", name: "BackOffice", component: BackEndNavbar },
