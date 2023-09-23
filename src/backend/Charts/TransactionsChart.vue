@@ -1,5 +1,6 @@
 <template>
     <div>
+      <Loader v-if="isLoading" />
       <div class="card-header">
         <div style="padding: 10px;">Total Transactions : {{ graphType }}</div>
         <div style="padding: 10px;">
@@ -19,12 +20,16 @@
     </div>
   </template>
 <script>
+import Loader from "../../components/Layouts/Loader";
 export default {
-  
+  components: {
+        Loader,
+       
+    },
   data: function() {
     return {
       graphType: "Monthly",
-      
+      isLoading: false,
       chartOptions: {
         theme: {
           mode: 'light',
@@ -76,9 +81,10 @@ export default {
   },
   methods:{
     getGraphType(data){
+      this.isLoading = true;
       if(data == 'Weekly'){
-        
-        this.chartOptions = {
+        setTimeout(() => {
+          this.chartOptions = {
             theme: {
               mode: 'light',
             },
@@ -99,9 +105,13 @@ export default {
             data: [70, 91,20,16,55,99,30],
           },
         ]
-        this.graphType = data
+        this.graphType = data;
+        this.isLoading = false;
+          }, 2000);
+        
       }
       if(data == 'Monthly'){
+        setTimeout(() => {
         this.chartOptions = {
             theme: {
               mode: 'light',
@@ -123,7 +133,9 @@ export default {
             data: [70, 91,20,16,55,99,30, 40, 35, 50, 49, 60],
           },
         ]
-        this.graphType = data
+        this.graphType = data;
+        this.isLoading = false;
+      }, 2000);
       }
     }
   }

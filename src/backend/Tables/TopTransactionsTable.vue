@@ -1,5 +1,6 @@
 <template>
     <div>
+      <Loader v-if="isLoading" />
       <div class="card-header">
         <div style="padding: 10px;font-weight: bold;">Top 10 Transactions : {{ graphType }}</div>
         <div style="padding: 10px;">
@@ -15,11 +16,16 @@
     </div>
   </template>
 <script>
+import Loader from "../../components/Layouts/Loader";
 export default {
-  
+  components: {
+        Loader,
+       
+    },
   data: function() {
     return {
       graphType: "Monthly",
+      isLoading: false,
       fields: ['Id', 'Type', 'Currency','Amount','Product','Customer','Date'],
       items: [
       { Id: '10002', Type: 'Visa', Currency: 'USD',Amount:'250.00',Product:'Pa System',Customer:'gshoniwa',Date:'10/05/2023 08:55' },
@@ -39,7 +45,9 @@ export default {
   },
   methods:{
     getGraphType(data){
+      this.isLoading = true;
       if(data == 'Weekly'){
+        setTimeout(() => {
         this.items = [
           { Id: '20002', Type: 'MasterCard', Currency: 'USD',Amount:'550.00',Product:'Suite',Customer:'kkudzima',Date:'12/05/2023 08:55' },
           { Id: '20003', Type: 'Visa', Currency: 'USD', Amount:'650.00',Product:'Travel Bag',Customer:'pchuru',Date:'13/05/2023 11:50' },
@@ -52,21 +60,26 @@ export default {
           
       ]
         
-        this.graphType = data
+        this.graphType = data;
+        this.isLoading = false;
+        }, 2000);
       }
       if(data == 'Monthly'){
-        this.items = [
-          { Id: '10002', Type: 'Visa', Currency: 'USD',Amount:'250.00',Product:'Pa System',Customer:'gshoniwa',Date:'10/05/2023 08:55' },
-          { Id: '10003', Type: 'Visa', Currency: 'USD', Amount:'150.00',Product:'Subscription',Customer:'bshayamano',Date:'11/06/2023 11:50' },
-          { Id: '10004', Type: 'MasterCard', Currency: 'USD',Amount:'800.00',Product:'Smart TV',Customer:'pchuru',Date:'15/07/2023 08:12' },
-          { Id: '10005', Type: 'Transfer', Currency: 'ZWL',Amount:'15,000.00',Product:'Subscription',Customer:'jpeterson',Date:'24/07/2023 09:55' },
-          { Id: '10006', Type: 'Zipit', Currency: 'ZWL',Amount:'45,000.00',Product:'Generator',Customer:'kkudzima',Date:'15/08/2023 08:55' },
-          { Id: '10007', Type: 'Visa', Currency: 'USD',Amount:'650.00',Product:'Dinner Table',Customer:'gshoniwa',Date:'17/08/2023 14:55' },
-          { Id: '10008', Type: 'Visa', Currency: 'USD',Amount:'412.00',Product:'Subscription',Customer:'htakavira',Date:'14/09/2023 08:05' },
-          { Id: '10009', Type: 'Zipit', Currency: 'ZWL',Amount:'1500.00',Product:'Subscription',Customer:'gshoniwa',Date:'30/09/2023 08:55' },
-          
-      ]
-        this.graphType = data
+        setTimeout(() => {
+          this.items = [
+            { Id: '10002', Type: 'Visa', Currency: 'USD',Amount:'250.00',Product:'Pa System',Customer:'gshoniwa',Date:'10/05/2023 08:55' },
+            { Id: '10003', Type: 'Visa', Currency: 'USD', Amount:'150.00',Product:'Subscription',Customer:'bshayamano',Date:'11/06/2023 11:50' },
+            { Id: '10004', Type: 'MasterCard', Currency: 'USD',Amount:'800.00',Product:'Smart TV',Customer:'pchuru',Date:'15/07/2023 08:12' },
+            { Id: '10005', Type: 'Transfer', Currency: 'ZWL',Amount:'15,000.00',Product:'Subscription',Customer:'jpeterson',Date:'24/07/2023 09:55' },
+            { Id: '10006', Type: 'Zipit', Currency: 'ZWL',Amount:'45,000.00',Product:'Generator',Customer:'kkudzima',Date:'15/08/2023 08:55' },
+            { Id: '10007', Type: 'Visa', Currency: 'USD',Amount:'650.00',Product:'Dinner Table',Customer:'gshoniwa',Date:'17/08/2023 14:55' },
+            { Id: '10008', Type: 'Visa', Currency: 'USD',Amount:'412.00',Product:'Subscription',Customer:'htakavira',Date:'14/09/2023 08:05' },
+            { Id: '10009', Type: 'Zipit', Currency: 'ZWL',Amount:'1500.00',Product:'Subscription',Customer:'gshoniwa',Date:'30/09/2023 08:55' },
+            
+        ]
+          this.graphType = data;
+          this.isLoading = false;
+      }, 2000);
       }
     }
   }

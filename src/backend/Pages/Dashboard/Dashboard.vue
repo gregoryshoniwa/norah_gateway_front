@@ -1,6 +1,6 @@
 <template>
     <div style="padding-left: 15px; padding-top: 15px;">
-        <loader v-if="isLoading" />
+        <Loader v-if="isLoading" />
         <b-container fluid>
             
             <div style="margin-bottom: 20px;">Dashboard</div>
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import Loader from "../../../components/Layouts/Loader"
+import Loader from "../../../components/Layouts/Loader";
 import TransactionsChart from "../../Charts/TransactionsChart";
 import TopTransactionsTable from "../../Tables/TopTransactionsTable";
 
