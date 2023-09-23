@@ -1,94 +1,139 @@
 <template>
     <div class="container">
-
-<form action="">
-
-    <div class="row">
-
-        <div class="col">
-
-            <h3 class="title">billing address</h3>
-
-            <div class="inputBox">
-                <span>full name :</span>
-                <input type="text" placeholder="john deo">
+        <loader v-if="isLoading" />
+            
+        <form action="">
+            <div class="login-header">
+                <div style="display: flex; align-items: center; justify-content: center;margin: 15px;">
+                    <img src="../../assets/images/logo.fw.png" alt="logo">
+                    <span><h3>NORAH : Check-Out</h3></span>
+                </div> 
             </div>
-            <div class="inputBox">
-                <span>email :</span>
-                <input type="email" placeholder="example@example.com">
-            </div>
-            <div class="inputBox">
-                <span>address :</span>
-                <input type="text" placeholder="room - street - locality">
-            </div>
-            <div class="inputBox">
-                <span>city :</span>
-                <input type="text" placeholder="mumbai">
-            </div>
+            <div class="row">
 
-            <div class="flex">
-                <div class="inputBox">
-                    <span>state :</span>
-                    <input type="text" placeholder="india">
+                <div class="col">
+
+                    <!-- <h3 class="title">billing address</h3> -->
+
+                    <div class="inputBox">
+                        <span>full name :</span>
+                        <input type="text" placeholder="john deo">
+                    </div>
+                    <div class="inputBox">
+                        <span>email :</span>
+                        <input type="email" placeholder="example@example.com">
+                    </div>
+                    <div class="inputBox">
+                        <span>address :</span>
+                        <input type="text" placeholder="room - street - locality">
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>city :</span>
+                            <input type="text" placeholder="india">
+                        </div>
+                        <div class="inputBox">
+                            <span>Country :</span>
+                            <input type="text" placeholder="123 456">
+                        </div>
+                    </div>
+
                 </div>
-                <div class="inputBox">
-                    <span>zip code :</span>
-                    <input type="text" placeholder="123 456">
+
+                <div class="col">
+
+                    <!-- <h3 class="title">payment</h3> -->
+
+                    <div class="inputBox">
+                        <span>Select Method : <b>{{ paymentMethod }}</b></span>
+                        <img @click="paymentType('Bank Transfer')" style="margin: 5px;" src="../../assets/images/payments/banktransfer.fw.png" alt="Bank Transfer">
+                        <img @click="paymentType('Zipit')" style="margin: 5px;" src="../../assets/images/payments/zimswitch.png" alt="Zipit">
+                        <img @click="paymentType('EcoCash')" style="margin: 5px;" src="../../assets/images/payments/ecocash.png" alt="Ecocash">
+                        <img @click="paymentType('Visa Card')" style="margin: 5px;" src="../../assets/images/payments/visa.png" alt="Visa Card">
+                        <img @click="paymentType('Master Card')" style="margin: 5px;" src="../../assets/images/payments/mastercard.png" alt="Master Card">
+                    </div>
+                    <section v-if="paymentMethod == 'Visa Card' || paymentMethod == 'Master Card'">
+                        <div class="inputBox">
+                            <span>name on card :</span>
+                            <input type="text" placeholder="mr. john deo">
+                        </div>
+                        <div class="inputBox">
+                            <span>credit card number :</span>
+                            <input type="number" placeholder="1111-2222-3333-4444">
+                        </div>
+                    
+
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>exp MM/YY :</span>
+                                <input type="number" placeholder="2022">
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV :</span>
+                                <input type="text" placeholder="1234">
+                            </div>
+                        </div>
+
+                    </section>
+                    <section v-if="paymentMethod == 'Bank Transfer'">
+                        <div class="inputBox">
+                            <span>name of Account :</span>
+                            <input type="text" placeholder="mr. john deo">
+                        </div>
+                        <div class="inputBox">
+                            <span>account number :</span>
+                            <input type="number" placeholder="660123654789">
+                        </div>
+                        <div class="inputBox">
+                            <span>Transaction Ref :</span>
+                            <input type="number" placeholder="F111-G222-3333">
+                        </div>
+                    
+                    </section>
+                    <section v-if="paymentMethod == 'Zipit'">
+                        <div class="inputBox">
+                            <span>name of Account :</span>
+                            <input type="text" placeholder="mr. john deo">
+                        </div>
+                        <div class="inputBox">
+                            <span>account number :</span>
+                            <input type="number" placeholder="660123654789">
+                        </div>
+                        <div class="inputBox">
+                            <span>Transaction Ref :</span>
+                            <input type="number" placeholder="F111-G222-3333">
+                        </div>
+
+                    </section>
+                    <section v-if="paymentMethod == 'EcoCash'">
+                        
+                        <div class="inputBox">
+                            <span>Econet number :</span>
+                            <input type="number" placeholder="0772996330">
+                        </div>
+                    
+
+                    </section>
+                    
+                
                 </div>
+
             </div>
 
-        </div>
+            <input type="submit" value="Pay : $152.52" class="submit-btn">
 
-        <div class="col">
+        </form>
 
-            <h3 class="title">payment</h3>
-
-            <div class="inputBox">
-                <span>Select Method : <b>{{ paymentMethod }}</b></span>
-                <img @click="paymentType('Bank Transfer')" style="margin: 5px;" src="../../assets/images/payments/banktransfer.fw.png" alt="">
-                <img @click="paymentType('Zipit')" style="margin: 5px;" src="../../assets/images/payments/zipit.fw.png" alt="">
-                <img @click="paymentType('EcoCash')" style="margin: 5px;" src="../../assets/images/payments/ecocash.fw.png" alt="">
-                <img @click="paymentType('Visa Or MasterCard')" style="margin: 5px;" src="../../assets/images/payments/mastervisa.fw.png" alt="">
-            </div>
-            <section v-if="paymentMethod == 'Visa Or MasterCard'">
-                <div class="inputBox">
-                <span>name on card :</span>
-                <input type="text" placeholder="mr. john deo">
-            </div>
-            <div class="inputBox">
-                <span>credit card number :</span>
-                <input type="number" placeholder="1111-2222-3333-4444">
-            </div>
-            <div class="inputBox">
-                <span>exp month :</span>
-                <input type="text" placeholder="january">
-            </div>
-
-            <div class="flex">
-                <div class="inputBox">
-                    <span>exp year :</span>
-                    <input type="number" placeholder="2022">
-                </div>
-                <div class="inputBox">
-                    <span>CVV :</span>
-                    <input type="text" placeholder="1234">
-                </div>
-            </div>
-
-            </section>
-           
-        </div>
-
-    </div>
-
-    <input type="submit" value="proceed to checkout" class="submit-btn">
-
-</form>
-
-</div>  
+    </div>  
   </template>
 <script>
+import Loader from "../Layouts/Loader.vue"
 export default {
+    name: 'CheckOut',
+    components: {
+        Loader,
+    },
   data: function() {
     return {
       paymentMethod: "Bank Transfer"

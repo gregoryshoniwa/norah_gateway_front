@@ -33,9 +33,11 @@ import ContactUsPage from "../components/Pages/ContactUsPage";
 import BackEndNavbar from "../backend/Navbar/BackEndNavbar";
 import CheckOutPage from "../components/Pages/CheckOutPage";
 
+
 const routes = [
   { path: "/check-out", name: "CheckOutPage", component: CheckOutPage },
-  // { path: "/home-two", name: "HomeTwoPage", component: HomeTwoPage },
+  
+  
   { path: "/", name: "HomeTwoPage", component: HomeTwoPage },
   { path: "/back-office", name: "BackOffice", component: BackEndNavbar },
   
@@ -87,7 +89,7 @@ const routes = [
     name: "PrivacyPolicyPage",
     component: PrivacyPolicyPage,
   },
-  // { path: "/:pathMatch(.*)*", name: "ErrorPage", component: ErrorPage },
+  { path: "/:pathMatch(.*)*", name: "ErrorPage", component: ErrorPage },
   // { path: "/blog", name: "BlogPage", component: BlogPage },
   // {
   //   path: "/blog-left-sidebar",

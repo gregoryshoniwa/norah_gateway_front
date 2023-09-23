@@ -108,9 +108,7 @@
             </transition>
         </section>
     </div>
-    
-        
-    
+
 </template>
 
 <script>
@@ -164,6 +162,7 @@ export default {
 
             this.theme = !this.theme
             body.classList.toggle("dark");
+
         }
     }
 }
@@ -185,10 +184,12 @@ export default {
         /* ===== Colors ===== */
         --body-color: #E4E9F7;
         --sidebar-color: #FFF;
+        --card-color: #FFF;
         --primary-color: #00A9A4;
         --primary-color-light: #F6F5FF;
         --toggle-color: #DDD;
         --text-color:#707070;
+        --text-card-color:#aaa9a955;
 
         /* ==== Transition ====*/
         --tran-02: all 0.2s ease;
@@ -207,9 +208,11 @@ export default {
         --body-color: #18191A;
         --sidebar-color: #242526;
         --primary-color: #3A3B3C;
+        --card-color: #3A3B3C;
         --primary-color-light: #3A3B3C;
         --toggle-color: #FFF;
         --text-color:#CCC;
+        --text-card-color:#737373;
     }
 
     .be-sidebar.close{
