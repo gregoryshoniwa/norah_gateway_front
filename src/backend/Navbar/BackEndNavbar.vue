@@ -182,9 +182,10 @@ export default {
     }
     :root{
         /* ===== Colors ===== */
-        --body-color: #E4E9F7;
+        /* --body-color:   #E4E9F7; */
+        --body-color:linear-gradient(315deg, #e5eae9 20%, #d5faf4 74%);
         --sidebar-color: #FFF;
-        --card-color: #FFF;
+        --card-color: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
         --primary-color: #00A9A4;
         --primary-color-light: #F6F5FF;
         --toggle-color: #DDD;

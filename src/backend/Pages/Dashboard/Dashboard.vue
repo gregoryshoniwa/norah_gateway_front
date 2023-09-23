@@ -3,10 +3,10 @@
         <Loader v-if="isLoading" />
         <b-container fluid>
             
-            <div style="margin-bottom: 20px;">Dashboard</div>
+            <div>Dashboard</div>
 
             <div style="margin-bottom: 20px;" class="insights">
-                <div>
+                <div class="glass">
                     <i style="background: rgba(0, 255, 21, 0.279);" class='bx bx-bar-chart-square'></i>
                     <span class="info">
                         <h5>USD 1,023.00</h5>
@@ -87,7 +87,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 15px;
-    margin-top: 36px;
+    margin-top: 15px;
  }
  .insights div{
     padding: 24px;
